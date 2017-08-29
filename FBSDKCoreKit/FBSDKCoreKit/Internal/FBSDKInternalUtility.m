@@ -625,13 +625,13 @@ static NSMapTable *_transientObjects;
 + (UIWindow *)findWindow
 {
   UIWindow *window = [UIApplication sharedApplication].keyWindow;
-  if (window == nil || window.windowLevel != UIWindowLevelNormal) {
-    for (window in [UIApplication sharedApplication].windows) {
-      if (window.windowLevel == UIWindowLevelNormal) {
-        break;
-      }
-    }
-  }
+//  if (window == nil || window.windowLevel != UIWindowLevelNormal) {
+//    for (window in [UIApplication sharedApplication].windows) {
+//      if (window.windowLevel == UIWindowLevelNormal) {
+//        break;
+//      }
+//    }
+//  }
   if (window == nil) {
     [FBSDKLogger singleShotLogEntry:FBSDKLoggingBehaviorDeveloperErrors
                        formatString:@"Unable to find a valid UIWindow", nil];
